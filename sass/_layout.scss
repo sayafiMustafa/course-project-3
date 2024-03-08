@@ -1,0 +1,110 @@
+body {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.container {
+  max-width: 120rem;
+  background-color: var(--color-gray-light-1);
+  margin: 8rem auto;
+  box-shadow: var(--shadow-dark);
+
+  //temp!
+  // min-height: 50rem;
+
+  // If parent is Flex container
+  // width: 120rem;
+  // flex-grow: 1;
+
+  @media only screen and (max-width: $bp-1200px) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.header {
+  font-size: 1.4rem;
+  height: 7rem;
+  border-bottom: var(--line);
+  background-color: #fff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-500px) {
+    flex-wrap: wrap;
+    height: 12rem;
+    align-content: space-around;
+  }
+}
+
+.content {
+  display: flex;
+
+  @media only screen and (max-width: $bp-900px) {
+    flex-direction: column;
+  }
+}
+
+.sidebar {
+  // height: 10rem;
+  background-color: var(--color-gray-dark-1);
+  // flex-grow: 1;
+  flex: 0 0 18%; // Is allowed to shrink because of using %
+  // padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel-view {
+  // background-color: aquamarine;
+  // flex-grow: 5.5;
+
+  // To have it grow at the start as it has no content!
+  flex: 1;
+
+  // temp
+  // height: 100rem;
+}
+
+.detail {
+  font-size: 1.4rem; // For both children!
+  padding: 4.5rem;
+  // color: #000;
+  display: flex;
+  gap: 4.5rem;
+  border-bottom: var(--line);
+
+  @media only screen and (max-width: $bp-900px) {
+    padding: 3rem;
+    gap: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-600px) {
+    flex-direction: column;
+  }
+}
+
+.description {
+  background-color: #fff;
+  flex: 0 0 60%;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+
+  @media only screen and (max-width: $bp-900px) {
+    padding: 2rem;
+  }
+}
+
+.user-reviews {
+  // background-color: aquamarine;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
